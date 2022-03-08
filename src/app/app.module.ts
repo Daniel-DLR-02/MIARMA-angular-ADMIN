@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostComponent } from './components/post/post.component';
+import { CommonModule } from '@angular/common';
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
@@ -20,11 +22,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     MaterialImportsModule,
     AppRoutingModule,
     ReactiveFormsModule,

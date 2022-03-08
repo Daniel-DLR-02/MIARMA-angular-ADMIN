@@ -1,1 +1,5 @@
-<p>admin-layout works!</p>
+<ng-container>
+    <ul>
+        <app-post-item *ngFor="let post of postList; let i = index" [postInput]="post"></app-post-item>
+    </ul>
+</ng-container>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/interfaces/user-login';
 import { UserService } from 'src/app/services/user-service.service';
 @Component({
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
 
 
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,
+    private router: Router) {
    }
 
   ngOnInit(): void {
@@ -31,6 +33,8 @@ export class LoginComponent implements OnInit {
   submit() {
     this.login = this.loginForm.value
     this.userService.login(this.login).subscribe(p=>localStorage.setItem('token',p.token));
+    this.router.navigate(['/posts']);
+
   }
 
 }
