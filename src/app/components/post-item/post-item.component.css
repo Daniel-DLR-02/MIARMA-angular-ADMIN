@@ -1,0 +1,42 @@
+mat-card {
+    margin-bottom: 20px;
+    box-shadow: 60px -16px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 3%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-image {
+    margin-left: 50px;
+    border-radius: 10%;
+}
+
+.avatar-image {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-right: 25px;
+}
+
+.user {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}

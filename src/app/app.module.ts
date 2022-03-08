@@ -12,8 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PostComponent } from './components/post/post.component';
 import { CommonModule } from '@angular/common';
+import { PostItemComponent } from './components/post-item/post-item.component';
+import { AdminLayoutComponent } from './pages/admin-layout/admin-layout.component';
+import { AuthImagePipe } from './components/auth-image.pipe';
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
@@ -23,7 +25,9 @@ import { CommonModule } from '@angular/common';
     RegisterComponent,
     HeaderComponent,
     SidebarComponent,
-    PostComponent
+    AdminLayoutComponent,
+    PostItemComponent,
+    AuthImagePipe,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,6 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
