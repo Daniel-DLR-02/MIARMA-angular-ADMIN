@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserLogin } from '../interfaces/user-login';
 import { Observable } from 'rxjs';
+import { LoginResponse } from '../interfaces/user-login-response';
 
 const DEFAULT_HEADERS = {
   headers: new HttpHeaders({
@@ -23,7 +24,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
 
-  login(user: UserLogin): Observable<any> {
-    return this.http.post(`${API_BASE_URL}/auth/login`, user, DEFAULT_HEADERS);
+  login(user: UserLogin): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(`${API_BASE_URL}/auth/login`, user, DEFAULT_HEADERS);
   }
 }

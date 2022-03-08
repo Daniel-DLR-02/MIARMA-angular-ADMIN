@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { UserLogin } from 'src/app/interfaces/user-login';
 import { UserService } from 'src/app/services/user-service.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,6 +10,7 @@ import { UserService } from 'src/app/services/user-service.service';
 export class LoginComponent implements OnInit {
 
   login !:UserLogin;
+  token !: String;
 
   loginForm: FormGroup = new FormGroup({
     nick: new FormControl(''),
@@ -30,11 +30,7 @@ export class LoginComponent implements OnInit {
 
   submit() {
     this.login = this.loginForm.value
-    this.userService.login(this.login).subscribe()
-
+    this.userService.login(this.login).subscribe(p=>localStorage.setItem('token',p.token));
   }
-
-
-
 
 }
