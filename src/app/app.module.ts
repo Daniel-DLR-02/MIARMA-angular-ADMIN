@@ -10,6 +10,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
@@ -22,9 +24,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MaterialImportsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
 
   ],
   providers: [],
