@@ -1,5 +1,8 @@
-<div class="overlay">
-    <ul>
-        <app-post-item *ngFor="let post of postList; let i = index" [postInput]="post"></app-post-item>
-    </ul>
-</div>
+<body>
+    <div class="overlay">
+        <app-header></app-header>
+        <ul>
+            <app-post-item *ngFor="let post of postList; let i = index" [postInput]="post"></app-post-item>
+        </ul>
+    </div>
+</body>
