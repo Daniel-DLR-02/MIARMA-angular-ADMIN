@@ -30,7 +30,7 @@ defaultHeaders = {
     return this.http.get<PostList>(`${API_BASE_URL}/post/me`,this.defaultHeaders);
   }
 
-  deletePost(id : string): Observable<PostList> {
-    return this.http.delete<PostList>(`${API_BASE_URL}/post/${id}`,this.defaultHeaders);
+  deletePost(id : string): Observable<void> {
+    return this.http.delete<void>(`${API_BASE_URL}/post/${id}`,this.defaultHeaders);
   }
 }

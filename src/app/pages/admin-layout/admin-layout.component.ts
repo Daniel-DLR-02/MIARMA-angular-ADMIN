@@ -8,12 +8,13 @@ import { PostService } from 'src/app/services/post-service.service';
 })
 export class AdminLayoutComponent implements OnInit {
 
-  postList!:Post[];
+  postList:Post[]=[];
 
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
     this.postService.getPostUser().subscribe(posts => {this.postList = posts.content});
   }
+
 
 }
